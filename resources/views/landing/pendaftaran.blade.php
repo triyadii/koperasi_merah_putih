@@ -127,6 +127,27 @@
 
 				<hr class="mb-8" style="border-color: #e7eef5; border-width: 2px;" />
 
+				<h3 class="fw-bolder mb-6" style="color: var(--kop-navy);">Informasi Usaha</h3>
+
+				<div class="row g-6 mb-8">
+					<div class="col-md-12">
+						<label class="form-label fw-bold" style="color: var(--kop-navy);">Nama Usaha</label>
+						<input type="text" class="form-control" name="namaUsaha" value="{{ old('namaUsaha') }}" placeholder="Nama usaha atau bisnis Anda" style="padding: .75rem; border-radius: .5rem;" />
+					</div>
+					<div class="col-md-6">
+						<label class="form-label fw-bold" style="color: var(--kop-navy);">Foto Usaha</label>
+						<input type="file" class="form-control" name="fotoUsaha" accept="image/*" style="padding: .75rem; border-radius: .5rem;" />
+						<div class="form-text mt-2">Format: JPG/PNG/JPEG. Maks: 2MB. (Opsional)</div>
+					</div>
+					<div class="col-md-6">
+						<label class="form-label fw-bold" style="color: var(--kop-navy);">File KTP</label>
+						<input type="file" class="form-control" name="fileKtp" accept="application/pdf,image/*" style="padding: .75rem; border-radius: .5rem;" />
+						<div class="form-text mt-2">Format: PDF/JPG/PNG. Maks: 2MB. (Opsional)</div>
+					</div>
+				</div>
+
+				<hr class="mb-8" style="border-color: #e7eef5; border-width: 2px;" />
+
 				<h3 class="fw-bolder mb-6" style="color: var(--kop-navy);">Informasi Pekerjaan & Koperasi</h3>
 
 				<div class="row g-6 mb-8">

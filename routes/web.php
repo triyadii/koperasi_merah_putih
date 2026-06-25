@@ -25,10 +25,8 @@ Route::get('/unit-usaha/{unitUsaha}', [LandingController::class, 'unitUsahaDetai
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran');
 Route::post('/pendaftaran', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
 
-Route::middleware('guest')->group(function () {
-    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-    Route::post('/login', [AuthController::class, 'authenticate'])->name('login.post');
-});
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('login.post')->middleware('guest');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 

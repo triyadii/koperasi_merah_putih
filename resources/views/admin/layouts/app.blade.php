@@ -92,6 +92,13 @@
 												<span class="menu-arrow d-lg-none"></span>
 											</a>
 										</div>
+										{{-- Keuangan Kas --}}
+										<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+											<a class="menu-link py-3" href="{{ route('admin.keuangan-kas.index') }}">
+												<span class="menu-title">Keuangan Kas</span>
+												<span class="menu-arrow d-lg-none"></span>
+											</a>
+										</div>
 										{{-- Informasi: Berita & Pengumuman --}}
 										<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
 											<span class="menu-link py-3">

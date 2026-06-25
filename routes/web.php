@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AnggotaController;
 use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\Admin\KeuanganKasController;
 use App\Http\Controllers\Admin\KontenController;
 use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\Admin\TentangKamiController;
@@ -64,6 +65,14 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::put('/anggota/{anggota}', [AnggotaController::class, 'update'])->name('anggota.update');
     Route::delete('/anggota/{anggota}', [AnggotaController::class, 'destroy'])->name('anggota.destroy');
     Route::patch('/anggota/{anggota}/activate', [AnggotaController::class, 'activate'])->name('anggota.activate');
+
+    // Manajemen Keuangan Kas
+    Route::get('/keuangan-kas', [KeuanganKasController::class, 'index'])->name('keuangan-kas.index');
+    Route::get('/keuangan-kas/export', [KeuanganKasController::class, 'export'])->name('keuangan-kas.export');
+    Route::post('/keuangan-kas', [KeuanganKasController::class, 'store'])->name('keuangan-kas.store');
+    Route::get('/keuangan-kas/{keuanganKa}/edit', [KeuanganKasController::class, 'edit'])->name('keuangan-kas.edit');
+    Route::put('/keuangan-kas/{keuanganKa}', [KeuanganKasController::class, 'update'])->name('keuangan-kas.update');
+    Route::delete('/keuangan-kas/{keuanganKa}', [KeuanganKasController::class, 'destroy'])->name('keuangan-kas.destroy');
 
     // Manajemen Berita
     Route::get('/berita', [BeritaController::class, 'index'])->name('berita');

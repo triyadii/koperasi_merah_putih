@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         DB::table('table_anggota')->truncate();
         DB::table('table_berita')->truncate();
         DB::table('table_pengumuman')->truncate();
+        DB::table('table_keuangan_kas')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         $this->call([
@@ -30,6 +31,7 @@ class DatabaseSeeder extends Seeder
             AnggotaSeeder::class,
             BeritaSeeder::class,
             PengumumanSeeder::class,
+            KeuanganKasSeeder::class,
         ]);
     }
 }
